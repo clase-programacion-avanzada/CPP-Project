@@ -37,10 +37,10 @@ Se le ha pedido que desarrolle las siguientes funcionalidades:
 2. Se debe definir una estructura que represente una cuenta bancaria según la especificación del archivo `.hbt`. (0.25)</br></br>
 3. Se debe definir una estructura que represente un cliente según la especificación del archivo `.hbt`. (0.25)</br></br>
 4. Desarrolle una función que escriba un archivo `.hbt` con la información de los clientes y sus cuentas. (1.0) </br></br>
-5. Desarrolle una función que permita ver la suma de los montos de las transacciones de un tipo particular para una cuenta de un cliente (debe permitir al usuario seleccionar el cliente, la cuenta y el tipo de transacción que desea ver).</br></br>
-6. Desarrolle una función que permita ver la el saldo de una cuenta de un cliente (debe permitir al usuario seleccionar el cliente y la cuenta que desea ver), el saldo es la suma de los montos de las transacciones de tipo débito menos la suma de los montos de las transacciones de tipo crédito. Asuma un saldo inicial de 0.</br></br>
-7. Desarrolle una función que permita generar un reporte de clientes como el mostrado en el archivo [example_report.txt](example_report.txt).</br></br>
-8. Permita al usuario leer el archivo `customers.hbt` y realizar las operaciones anteriores. (Tenga en cuenta que en este problema, no le va a ser útil la librería BinaryFileHandler.h que se le ha proporcionado, ya que el tamaño de los datos es variable).</br></br>
+5. Desarrolle una función que permita ver la suma de los montos de las transacciones de un tipo particular para una cuenta de un cliente (debe permitir al usuario seleccionar el cliente, la cuenta y el tipo de transacción que desea ver).(0.75)</br></br>
+6. Desarrolle una función que permita ver el saldo de una cuenta de un cliente (debe permitir al usuario seleccionar el cliente y la cuenta que desea ver), el saldo es la suma de los montos de las transacciones de tipo débito menos la suma de los montos de las transacciones de tipo crédito. Asuma un saldo inicial de 0.(0.5)</br></br>
+7. Desarrolle una función que permita generar un reporte de clientes como el mostrado en el archivo [example_report.txt](example_report.txt).(0.75)</br></br>
+8. Permita al usuario leer el archivo `customers.hbt` y realizar las operaciones anteriores. (Tenga en cuenta que en este problema, no le va a ser útil la librería BinaryFileHandler.h que se le ha proporcionado, ya que el tamaño de los datos es variable).(1.25)</br></br>
 
 ## Recursos en línea
 
