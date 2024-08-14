@@ -67,6 +67,7 @@ int main() {
 
 
 void printMenu() {
+            cout << "==========HellBank==========\n";
             cout << "1. Mostrar la sumatoria de transacciones, de acuerdo al tipo, de un cliente \n";
             cout << "2. Mostrar el saldo de una cuenta \n";
             cout << "3. Exportar reporte\n";
