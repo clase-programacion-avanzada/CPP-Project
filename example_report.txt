@@ -1,0 +1,63 @@
+===================REPORTE DE CUENTAS BANCARIAS DE HELLBANK===================
+
+Total de clientes: 3
+
+ID de cuenta: JSMGG77MiT
+Cliente: Juanito Alimana
+Cantidad de cuentas: 2
+
+    Tipo de cuenta: Ahorros
+    Total en cuenta: 62000
+    Total creditos: 8000
+    Total debitos: 70000
+    Numero de transacciones: 6
+
+    Tipo de cuenta: Corriente
+    Total en cuenta: 5000
+    Total creditos: 10000
+    Total debitos: 15000
+    Numero de transacciones: 3
+
+ID de cuenta: fcqQCuSkQz
+Cliente: Pedro Navaja
+Cantidad de cuentas: 1
+
+    Tipo de cuenta: Ahorros
+    Total en cuenta: 20000
+    Total creditos: 80000
+    Total debitos: 100000
+    Numero de transacciones: 3
+
+ID de cuenta: e0qTGFFIl8
+Cliente: Salomon Villada
+Cantidad de cuentas: 5
+
+    Tipo de cuenta: Ahorros
+    Total en cuenta: 61000
+    Total creditos: 8000
+    Total debitos: 69000
+    Numero de transacciones: 7
+
+    Tipo de cuenta: Corriente
+    Total en cuenta: 25000
+    Total creditos: 10000
+    Total debitos: 35000
+    Numero de transacciones: 4
+
+    Tipo de cuenta: Ahorros
+    Total en cuenta: 24000
+    Total creditos: 6000
+    Total debitos: 30000
+    Numero de transacciones: 4
+
+    Tipo de cuenta: Corriente
+    Total en cuenta: 7000
+    Total creditos: 3000
+    Total debitos: 10000
+    Numero de transacciones: 2
+
+    Tipo de cuenta: Ahorros
+    Total en cuenta: 54000
+    Total creditos: 6000
+    Total debitos: 60000
+    Numero de transacciones: 5
