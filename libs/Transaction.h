@@ -7,7 +7,7 @@ using namespace std;
 
 struct Transaction {
     char type;
-    long amount;
+    unsigned long int amount;
 };
 
 #endif
