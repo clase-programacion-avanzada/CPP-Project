@@ -14,8 +14,8 @@ int main() {
     string customersBinaryFileName = "customers.hbt";
 
     string loadingFromMessage = binaryFileExists(customersBinaryFileName) 
-        ? "Loading customers from binary file..." 
-        : "Loading customers from entry point...";
+        ? "Cargando clientes desde archivo .hbt..." 
+        : "Cargando clientes desde entry_point.txt...";
 
     cout << loadingFromMessage << endl;
     
@@ -34,32 +34,32 @@ int main() {
         switch (choice) {
             case 1:
                 // Code for option 1
-                cout << "Option 1 selected.\n";
+                cout << "Opción 1 no implementada aún.\n";
                 break;
             case 2:
                 // Code for option 2
-                cout << "Option 2 selected.\n";
+                cout << "Opción 2 no implementada aún.\n";
                 break;
             case 3:
                 // Code for option 3
-                cout << "Option 3 selected.\n";
+                cout << "Opción 3 no implementada aún.\n";
                 break;
 
             case 4:
                 // Code for option 4
-                cout << "Option 4 selected.\n";
+                cout << "Opcción 4 no implementada aún.\n";
                 break;
             case 0:
                 // Exit the program
                 cout << "Exiting...\n";
                 break;
             default:
-                cout << "Invalid choice. Please try again.\n";
+                cout << "Opción inválida. Intente de nuevo.\n";
                 break;
         }
         
         cout << "\n";
-    } while (choice != 4);
+    } while (choice != 0);
     
     return 0;
 }
