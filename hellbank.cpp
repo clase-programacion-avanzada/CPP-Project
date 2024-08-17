@@ -8,6 +8,7 @@ using namespace std;
 
 
 void printMenu();
+void printCustomers(List<Customer> customers);
 
 int main() {
     
@@ -49,6 +50,9 @@ int main() {
                 // Code for option 4
                 cout << "Opcción 4 no implementada aún.\n";
                 break;
+            case 5:
+                printCustomers(customers);
+                break;
             case 0:
                 // Exit the program
                 cout << "Exiting...\n";
@@ -64,15 +68,43 @@ int main() {
     return 0;
 }
 
-
-
 void printMenu() {
             cout << "==========HellBank==========\n";
             cout << "1. Mostrar la sumatoria de transacciones, de acuerdo al tipo, de un cliente \n";
             cout << "2. Mostrar el saldo de una cuenta \n";
             cout << "3. Exportar reporte\n";
             cout << "4. Guardar archivo .hbt\n";
+            cout << "5. Mostrar todos los clientes \n";
             cout << "0. Exit\n";
             cout << "Ingresa la opción deseada: ";
 }
 
+void printCustomers(List<Customer> customers) {
+    
+    cout << "Clientes: " << customers.size << endl;
+    for (int i = 0; i < customers.size; i++) {
+        cout << "Cliente: " << endl;
+        Customer customer = customers.get(i);
+        cout << "  ID: " << customer.id << endl;
+        cout << "  Nombre: " << customer.name << endl;
+        cout << "    Cuentas: " << customer.accounts.size << endl;
+
+        for (int j = 0; j < customer.accounts.size; j++) {
+            Account account = customer.accounts.get(j);
+            cout << "    Cuenta: " << endl;
+            cout << "      ID: " << account.id << endl;
+            string type = account.type == 'A' ? "Ahorros" : "Corriente";
+            cout << "      Tipo: " << type << endl;
+            cout << "      Transacciones: " << account.transactions.size << endl << endl;
+        
+            for (int k = 0; k < account.transactions.size; k++) {
+                Transaction transaction = account.transactions.get(k);
+
+                string type = transaction.type == 'D' ? "Débito" : "Crédito";
+                cout << "      Transacción: " << endl;
+                cout << "        Tipo: " << type << endl;
+                cout << "        Monto: " << transaction.amount << endl;
+            }
+        }
+    }
+}
