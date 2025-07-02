@@ -94,6 +94,7 @@ El proyecto se ha dividido en entregas semanales (cada semana será un sprint). 
   - La información del archivo de configuración
   - La información de un paciente
   - La información de un archivo de pacientes
+   
    >[!NOTE]
    > Cada estructura debe estar dentro de la carpeta libs y debe tener su propio archivo de cabecera.
 
@@ -105,6 +106,7 @@ El proyecto se ha dividido en entregas semanales (cada semana será un sprint). 
   - Calcular estadísticas
   - Exportar datos procesados
   - Salir
+   
    >[!NOTE]
    > El menú debe ser interactivo y permitir al usuario seleccionar opciones mediante un número. No es necesario que, en este sprint, se implemente la funcionalidad de cada opción, solo el menú y la estructura básica del programa.
 
