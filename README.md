@@ -236,6 +236,8 @@ Para ejecutar el programa, asegúrese de tener un compilador de C++ instalado, c
 
 ## Dónde está el archivo de configuración y de pacientes
 
-Los archivos de [configuración](/data/configuracion.txt) y de pacientes se encuentran en la carpeta [data](/data/). Ahí, encontrará un archivo llamado pacientes_small.csv que contiene los datos de dos pacientes, ambos corresponderan con los pacientes del archivo generado `patient_readings_simulation_small.bsf`.
+## Dónde está el archivo de configuración y de pacientes
 
-Para la entrega final, se utilizará el archivo pacientes.csv que contiene los datos de cuatro pacientes, uno con un ECG anómalo y otro con un ECG normal. Este archivo es más grande y es el que se utilizará para la entrega final del proyecto. De este archivo, aleatoriamente, se tomaron cuatro pacientes para generar el archivo `patient_readings_simulation.bsf`.
+Los archivos de [configuración](/data/configuracion.txt) y de pacientes se encuentran en la carpeta [data](/data/). Ahí, encontrará un archivo llamado [pacientes_small.csv](/data/pacientes_small.csv) que contiene los datos de dos pacientes, ambos corresponderan con los pacientes del archivo generado `patient_readings_simulation_small.bsf`.
+
+Para la entrega final, se utilizará el archivo [pacientes.csv](/data/pacientes.csv) que contiene los datos de cuatro pacientes, dos con un ECG anómalo y dos con un ECG normal. Este archivo es más grande y es el que se utilizará para la entrega final del proyecto. De este archivo, aleatoriamente, se tomaron cuatro pacientes para generar el archivo `patient_readings_simulation.bsf`.
