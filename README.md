@@ -54,7 +54,7 @@ O,95,100
 
 Este archivo contiene los límites inferior y superior para cada tipo de sensor. El sistema debe cargar estos umbrales al inicio y utilizarlos para detectar anomalías en las lecturas de los pacientes.
 
-Adicionalmente, existirá un archivo de texto con los datos de los pacientes de la clínica, que no necesariamente pertenecen a la UCI. Este archivo se llamará `pacientes.txt` y tendrá el siguiente formato:
+Adicionalmente, existirá un archivo de texto con los datos de los pacientes de la clínica, que no necesariamente pertenecen a la UCI. Este archivo se llamará `pacientes.csv` y tendrá el siguiente formato:
 
 ```csv
 # id; tipoDeDocumento; documento; nombres; apellidos; fechaNacimiento; telefono; email; tipoDeSangre; entidadSalud; medicinaPrepagada
