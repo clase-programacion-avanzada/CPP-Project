@@ -137,8 +137,8 @@ El proyecto se ha dividido en entregas semanales (cada semana será un sprint). 
    Implemente una función que genere un archivo de texto (`mediciones_paciente_<idDePaciente>.txt`) que contenga todas las lecturas de un paciente específico, ordenadas cronológicamente y agrupadas por tipo de sensor. El formato debe ser claro y legible para el personal médico y debe incluir las mediciones de todos los sensores.
    Al final de las lecturas de cada tipo de sensor, debe incluir las estadísticas básicas (mínimo, máximo, promedio) de las lecturas.
 
-   >[!NOTE]
-   > Para el caso del reporte de mediciones, cree mediciones de prueba dentro de su código para verificar el correcto funcionamiento de la función. No es necesario que se lean de un archivo, pero sí que se simule el formato correcto de las lecturas.
+>[!NOTE]
+> Para el caso del reporte de mediciones, cree mediciones de prueba dentro de su código para verificar el correcto funcionamiento de la función. No es necesario que se lean de un archivo, pero sí que se simule el formato correcto de las lecturas.
 
 ### Entrega semana 5 (sprint 3) [Taller de archivos binarios]
 
