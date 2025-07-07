@@ -23,14 +23,17 @@ double ReadLineAsDouble(fstream& file, const string& description);
 
 int main() {
 
-  bool success_small = GenerateBinaryFile(
-      "data/generate binary file/patient_readings_simulation_small.txt",
-      "patient_readings_simulation_small.bsf");
-  bool success_large = GenerateBinaryFile("data/generate binary file/patient_readings_simulation.txt",
-                                          "patient_readings_simulation.bsf");
+    bool success_tiny = GenerateBinaryFile(
+      "data/generate binary file/patient_readings_simulation_tiny.txt",
+      "patient_readings_simulation_tiny.bsf");
+    bool success_small = GenerateBinaryFile(
+        "data/generate binary file/patient_readings_simulation_small.txt",
+        "patient_readings_simulation_small.bsf");
+    bool success_large = GenerateBinaryFile("data/generate binary file/patient_readings_simulation.txt",
+                                            "patient_readings_simulation.bsf");
 
-  // Return 0 on success (both true), 1 on any failure.
-  return (success_small && success_large) ? 0 : 1;
+    // Return 0 on success (both true), 1 on any failure.
+    return (success_small && success_large && success_tiny) ? 0 : 1;
 }
 
 uint8_t ReadSingleByteNumber(fstream& file, const string& description) {

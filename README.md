@@ -134,7 +134,7 @@ El proyecto se ha dividido en entregas semanales (cada semana será un sprint). 
    Implemente una función que analice una lectura de un paciente, distinta a ECG, y detecte si hay anomalías en los datos. La función debe utilizar los límites definidos en el archivo de configuración para determinar si una lectura es anormal.
 
 - **(35 puntos) Reporte de Mediciones de un Paciente:**
-   Implemente una función que genere un archivo de texto (`mediciones_paciente_<idDePaciente>.txt`) que contenga todas las lecturas de un paciente específico, ordenadas cronológicamente y agrupadas por tipo de sensor. El formato debe ser claro y legible para el personal médico y debe incluir las mediciones de todos los sensores.
+   Implemente una función que genere un archivo de texto (`mediciones_paciente_<idDePaciente>.txt`) que contenga todas las lecturas de un paciente específico, ordenadas cronológicamente y agrupadas por tipo de sensor, debe indicar si una lectura es anómala o normal. El formato debe ser claro y legible para el personal médico y debe incluir las mediciones de todos los sensores. Para ECG no es necesario incluir la detección de anomalía, solo se debe incluir el valor de la medición.
    Al final de las lecturas de cada tipo de sensor, debe incluir las estadísticas básicas (mínimo, máximo, promedio) de las lecturas.
 
 >[!NOTE]
@@ -206,9 +206,13 @@ La nota final del proyecto se calculará con base en las entregas semanales. Es 
 
 ¡Buena suerte! Este proyecto simula una situación real que podría enfrentar como ingeniero.
 
+---
+
 ## Cómo generar el archivo binario `.bsf`
 
-Para generar el archivo binario `.bsf`, compile y ejecute cualquiera de los programas `generate_binary_files.cpp` o `generate_binary_files_using_strings.cpp`. Estos programas generan dos archivos binarios:
+Para generar el archivo binario `.bsf`, compile y ejecute cualquiera de los programas `generate_binary_files.cpp` o `generate_binary_files_using_strings.cpp`. Estos programas generan tres archivos binarios:
+
+- **`patient_readings_simulation_tiny.bsf`**: Este archivo contiene simulaciones de lecturas para dos pacientes, con tres mediciones en total (dos de un paciente y una de otro). Este archivo es muy pequeño y se puede utilizar para pruebas iniciales. Este archivo solo contiene una lectura ECG para verificar que se está cargando correctamente el archivo binario y que se puede leer correctamente, no le servirá para probar la generación del archivo binario de anomalías ECG.
 
 - **`patient_readings_simulation_small.bsf`**: Este archivo contiene simulaciones de lecturas para dos pacientes, uno con un ECG anómalo y otro con un ECG normal. Este archivo es más pequeño y se puede utilizar para pruebas iniciales.
 - **`patient_readings_simulation.bsf`**: Este archivo contiene simulaciones de las lecturas de 1 día para cuatro pacientes. Este archivo es más grande y es el que se utilizará para la entrega final del proyecto.
@@ -233,8 +237,6 @@ Para ejecutar el programa, asegúrese de tener un compilador de C++ instalado, c
    ```
 
 3. Después de ejecutar el programa, se generarán los archivos binarios `patient_readings_simulation_small.bsf` y `patient_readings_simulation.bsf` en el directorio actual.
-
-## Dónde está el archivo de configuración y de pacientes
 
 ## Dónde está el archivo de configuración y de pacientes
 

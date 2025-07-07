@@ -25,12 +25,14 @@ void WriteStringToBinary(fstream& binary_file, const char* str, int size);
 
 
 int main() {
+    int result_tiny = GenerateBinaryFile("data/generate binary file/patient_readings_simulation_tiny.txt", 
+        "patient_readings_simulation_tiny.bsf");
     int result_small = GenerateBinaryFile("data/generate binary file/patient_readings_simulation_small.txt", 
         "patient_readings_simulation_small.bsf");
     int result = GenerateBinaryFile("data/generate binary file/patient_readings_simulation.txt", 
         "patient_readings_simulation.bsf");
 
-    return result_small || result; // Return 0 if both files were generated successfully, otherwise return 1
+    return result_small || result_tiny || result; // Return 0 if all files were generated successfully, otherwise return 1
 }
 
 
