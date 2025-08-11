@@ -140,7 +140,7 @@ El proyecto se ha dividido en entregas semanales (cada semana será un sprint). 
 >[!NOTE]
 > Para el caso del reporte de mediciones, cree mediciones de prueba dentro de su código para verificar el correcto funcionamiento de la función. No es necesario que se lean de un archivo, pero sí que se simule el formato correcto de las lecturas.
 
-### Entrega semana 5 (sprint 3) [Taller de archivos binarios]
+### Entrega semana 6 (sprint 3) [Taller de archivos binarios]
 
 - **(30 puntos) Lectura de Archivos BSF:**
    Desarrolle una función que lea un archivo binario `.bsf` y cargue los datos en las estructuras definidas anteriormente. La función debe manejar correctamente los diferentes tipos de sensores y las mediciones asociadas a cada paciente.
@@ -166,7 +166,7 @@ El proyecto se ha dividido en entregas semanales (cada semana será un sprint). 
 > 
 > En el caso de las lecturas de ECG, tendrá las mediciones de un paciente con un ECG anómalo y otro con un ECG normal. De esta manera, podrá probar el correcto funcionamiento de la detección de anomalías en ECG y la exportación de pacientes con ECG anómalo.
 
-### Entrega semana 6 (sprint 4) [Taller de arreglos dinámicos]
+### Entrega semana 7 (sprint 4) [Taller de arreglos dinámicos]
 
 - **(100 puntos) Implementación de Arreglos Dinámicos:**
    En su proyecto, todos los arreglos deben ser dinámicos. Haga los cambios necesarios en las estructuras y funciones para que utilicen arreglos dinámicos en lugar de arreglos estáticos. No se permite el uso de la clase `std::vector` ni ninguna otra clase de la STL que maneje arreglos dinámicos. Tampoco podrá poner un tamaño fijo a los arreglos, ya que el tamaño de los datos puede variar dependiendo del archivo que se esté procesando, su código debe funcionar para cualquier tamaño de archivo.
