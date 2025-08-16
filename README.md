@@ -22,7 +22,7 @@ Los datos de los sensores se almacenan en archivos `.bsf` (Biomedical Sensor For
 
 ### Estructura de medición
 
-- **ID del Paciente** (11 bytes): Código único que identifica al paciente monitoreado. Este código será de 10 caracteres y corresponde al documento de identidad del paciente.
+- **ID del Paciente** (1 byte): Código único que identifica al paciente monitoreado. Este código será de 1 caracteres y corresponde al id del paciente.
 - **Fecha y Hora** (24 bytes): Momento exacto de la lectura en formato "DD/MM/AAAA HH:MM:ss.sss".
 - **Número de Lecturas** (4 bytes): Cantidad de lecturas almacenadas a continuación. El período de lectura varía dependiendo del tipo de sensor, por lo que a una misma hora puede tener distintas lecturas de varios tipos.
 - **Lecturas** (variable): Un arreglo dinámico de lecturas.
