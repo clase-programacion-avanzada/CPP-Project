@@ -157,8 +157,8 @@ El proyecto se ha dividido en entregas semanales (cada semana será un sprint). 
    - **ID del Paciente** (11 bytes): Código único que identifica al paciente.
    - **Número de Mediciones ECG** (4 bytes): Cantidad de mediciones de ECG que tiene el paciente.
    - **Mediciones ECG** (variable): Un arreglo dinámico de mediciones de ECG, donde cada medición contiene:
-   - **Fecha y Hora** (24 bytes): Momento exacto de la lectura en formato "DD/MM/AAAA HH:MM:ss.sss".
-   - **Valor de Medida** (8 bytes): Valor de la medición de ECG.
+     - **Fecha y Hora** (24 bytes): Momento exacto de la lectura en formato "DD/MM/AAAA HH:MM:ss.sss".
+     - **Valor de Medida** (8 bytes): Valor de la medición de ECG.
 
 > [!NOTE]
 > En este caso, tendrá un archivo pequeño de lecturas y de pacientes con los que podrá probar el funcionamiento de la lectura de archivos binarios y de texto. Para la entrega final, el archivo será bastante más grande.
