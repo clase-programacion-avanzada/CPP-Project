@@ -155,7 +155,6 @@ El proyecto se ha dividido en entregas semanales (cada semana será un sprint). 
    Desarrolle una función que genere un archivo binario con los pacientes que tienen un ECG anómalo. El archivo debe llamarse `pacientes_ecg_anomalos.dat` y tener el siguiente formato:
 
    - **ID del Paciente** (11 bytes): Código único que identifica al paciente.
-   - **ID de la Máquina** (1 byte): Identifica la máquina que está monitoreando al paciente.
    - **Número de Mediciones ECG** (4 bytes): Cantidad de mediciones de ECG que tiene el paciente.
    - **Mediciones ECG** (variable): Un arreglo dinámico de mediciones de ECG, donde cada medición contiene:
    - **Fecha y Hora** (24 bytes): Momento exacto de la lectura en formato "DD/MM/AAAA HH:MM:ss.sss".
