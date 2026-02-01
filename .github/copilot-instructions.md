@@ -7,6 +7,7 @@ This is a C++ academic project for processing biomedical sensor data from UCI (I
 - **No `std::vector` or STL containers** - Use raw dynamic arrays with `new[]`/`delete[]`
 - **No `std::string` for data storage** - Only allowed for tokenizing text files; use `char*` arrays otherwise
 - Memory efficiency is paramount (simulates embedded Linux on Raspberry Pi/Orange Pi)
+- Create inside the same .hh files the implementation of the functions declared in them (no separate .cpp files for student code)
 
 ## Binary File Format (.bsf)
 Hierarchical structure: **UCI Room → Machines → Measurements → Readings**
