@@ -72,8 +72,6 @@ El proyecto se ha dividido en entregas semanales (cada semana será un sprint). 
 > Si no se se entrega una tarea en la semana correspondiente, se debe entregar en la semana siguiente, pero se perderán puntos por retraso. En concreto, se perderán 30 puntos (1.5 en la nota final) por cada semana de retraso.
 >
 >Por ejemplo, si la tarea de la semana 1 no se entrega en la semana 1, se puede entregar en la semana 2, pero se perderán 30 puntos. Si se entrega en la semana 3, se perderán 60 puntos, y así sucesivamente. Lo mismo aplica para las tareas que se vayan acumulando en las siguientes semanas.
->
-> **Esto no aplica para el primer sprint**, que se entregará en la semana 4.
 
 >[!CAUTION]
 > Si bien no están prohibidas las herramientas de IA, en caso de generar código con estas herramientas, los integrantes del equipo deben ser capaces de explicar el código generado y demostrar que lo entienden. Si no pueden hacerlo, esa porción de código no será aceptada.
@@ -82,7 +80,7 @@ El proyecto se ha dividido en entregas semanales (cada semana será un sprint). 
 >
 > Cualquier código que contenga referencias a la clase Vector o similares no será aceptado, ya que se debe utilizar arreglos dinámicos.
 
-### Entrega semana 3 (sprint 1) [Taller de cadenas de caracteres y estructuras]
+### Entrega semana 4 (sprint 1) [Taller de cadenas de caracteres y estructuras]
 
 - **(15 puntos) Definición de Estructuras:**
    Defina las estructuras necesarias para representar:
@@ -165,12 +163,12 @@ El proyecto se ha dividido en entregas semanales (cada semana será un sprint). 
 > 
 > En el caso de las lecturas de ECG, tendrá las mediciones de un paciente con un ECG anómalo y otro con un ECG normal. De esta manera, podrá probar el correcto funcionamiento de la detección de anomalías en ECG y la exportación de pacientes con ECG anómalo.
 
-### Entrega semana 6 (sprint 4) [Taller de arreglos dinámicos]
+### Entrega semana 7 (sprint 4) [Taller de arreglos dinámicos]
 
 - **(100 puntos) Implementación de Arreglos Dinámicos:**
    En su proyecto, todos los arreglos deben ser dinámicos. Haga los cambios necesarios en las estructuras y funciones para que utilicen arreglos dinámicos en lugar de arreglos estáticos. No se permite el uso de la clase `std::vector` ni ninguna otra clase de la STL que maneje arreglos dinámicos. Tampoco podrá poner un tamaño fijo a los arreglos, ya que el tamaño de los datos puede variar dependiendo del archivo que se esté procesando, su código debe funcionar para cualquier tamaño de archivo.
 
-### Entrega semana 7 (sprint 5) [Pruebas en Orange Pi/ Raspberry Pi / Compuatdor con Linux / Máquina Virtual]
+### Entrega semana 7 (sprint 5, final) [Pruebas en Orange Pi/ Raspberry Pi / Compuatdor con Linux / Máquina Virtual]
 
 Durante esta semana, se comprobará que el código funciona correctamente en una Raspberry Pi o en una máquina virtual con Linux. Se espera que el código se compile y ejecute sin errores, y que todas las funcionalidades implementadas funcionen correctamente. Se revisarán las siguientes funcionalidades:
 
@@ -182,7 +180,7 @@ Durante esta semana, se comprobará que el código funciona correctamente en una
 
 ## Entrega
 
-Debe entregar durante la semana 8, en un repositorio de Github o Gitlab, la siguiente documentación:
+Debe entregar durante la semana 7, en un repositorio de Github o Gitlab, la siguiente documentación:
 
 1. El código fuente.
 2. Un README que explique cómo compilar y ejecutar el programa, así como una descripción de las funcionalidades implementadas.
