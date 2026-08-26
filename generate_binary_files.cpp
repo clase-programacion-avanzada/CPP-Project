@@ -1,3 +1,4 @@
+#include <cstdint>
 #include <iostream>
 #include <fstream>
 #include <cstring>
@@ -7,7 +8,6 @@ using namespace std;
 // Buffer size constants
 const int kOneByteNumberBufferSize = 4;
 const int kFourByteNumberBufferSize = 11;
-const int kPatientgIdBufferSize = 11;
 const int kTimestampBufferSize = 24;
 const int kNumberOfReadingsBufferSize = 12;
 const int kReadingBufferSize = 20;
@@ -19,7 +19,8 @@ int ReadAndWriteNumberOfMachines(fstream& text_file, fstream& binary_file);
 void ProcessMachine(fstream& text_file, fstream& binary_file);
 void ProcessMeasurement(fstream& text_file, fstream& binary_file);
 void ProcessReading(fstream& text_file, fstream& binary_file);
-char ReadSingleByteNumber(fstream& text_file, const char* description);
+std::uint8_t ReadSingleByteNumber(fstream& text_file, const char* description,
+                                  bool display_value = true);
 unsigned int ReadFourByteNumber(fstream& text_file);
 void WriteStringToBinary(fstream& binary_file, const char* str, int size);
 
@@ -69,13 +70,17 @@ int GenerateBinaryFile(const char* text_file_name, const char* binary_file_name)
 
 
 // Utility function to read a single byte number from text file
-char ReadSingleByteNumber(fstream& text_file, const char* description) {
+std::uint8_t ReadSingleByteNumber(fstream& text_file,
+                                  const char* description,
+                                  bool display_value) {
     char* buffer = new char[kOneByteNumberBufferSize];
     text_file.getline(buffer, kOneByteNumberBufferSize);
     int value = atoi(buffer);
-    cout << description << ": " << value << endl;
+    if (display_value) {
+        cout << description << ": " << value << endl;
+    }
     
-    char result = static_cast<char>(value);
+    std::uint8_t result = static_cast<std::uint8_t>(value);
     delete[] buffer;
     return result;
 }
@@ -97,22 +102,25 @@ void WriteStringToBinary(fstream& binary_file, const char* str, int size) {
 
 // Read and write UCI ID
 void ReadAndWriteUciId(fstream& text_file, fstream& binary_file) {
-    char uci_id = ReadSingleByteNumber(text_file, "UCI ID");
-    binary_file.write(&uci_id, sizeof(uci_id));
+    std::uint8_t uci_id = ReadSingleByteNumber(text_file, "UCI ID");
+    binary_file.write(reinterpret_cast<const char*>(&uci_id), sizeof(uci_id));
 }
 
 // Read and write number of machines
 int ReadAndWriteNumberOfMachines(fstream& text_file, fstream& binary_file) {
-    char number_of_machines = ReadSingleByteNumber(text_file, "Number of machines");
-    binary_file.write(&number_of_machines, sizeof(number_of_machines));
+    std::uint8_t number_of_machines =
+        ReadSingleByteNumber(text_file, "Number of machines");
+    binary_file.write(reinterpret_cast<const char*>(&number_of_machines),
+                      sizeof(number_of_machines));
     return static_cast<int>(number_of_machines);
 }
 
 // Process a single machine
 void ProcessMachine(fstream& text_file, fstream& binary_file) {
     // Read machine ID
-    char machine_id = ReadSingleByteNumber(text_file, "Machine ID");
-    binary_file.write(&machine_id, sizeof(machine_id));
+    std::uint8_t machine_id = ReadSingleByteNumber(text_file, "Machine ID");
+    binary_file.write(reinterpret_cast<const char*>(&machine_id),
+                      sizeof(machine_id));
 
     // Read number of measurements
     unsigned int number_of_measurements = ReadFourByteNumber(text_file);
@@ -128,11 +136,11 @@ void ProcessMachine(fstream& text_file, fstream& binary_file) {
 
 // Process a single measurement
 void ProcessMeasurement(fstream& text_file, fstream& binary_file) {
-    // Read patient ID
-    char* patient_id = new char[kPatientgIdBufferSize];
-    text_file.getline(patient_id, kPatientgIdBufferSize);
-    WriteStringToBinary(binary_file, patient_id, kPatientgIdBufferSize);
-    delete[] patient_id;
+    // Read and write the internal patient ID (1 byte).
+    std::uint8_t patient_id =
+        ReadSingleByteNumber(text_file, "Patient ID", false);
+    binary_file.write(reinterpret_cast<const char*>(&patient_id),
+                      sizeof(patient_id));
 
     // Read timestamp
     char* timestamp = new char[kTimestampBufferSize];

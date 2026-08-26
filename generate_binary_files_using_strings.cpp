@@ -7,7 +7,6 @@
 using namespace std;
 
 
-const int kPatientIdBufferSize = 11;
 const int kTimestampBufferSize = 24;
 
 
@@ -148,12 +147,10 @@ void ProcessMachine(fstream& text_file, fstream& binary_file) {
 }
 
 void ProcessMeasurement(fstream& text_file, fstream& binary_file) {
-    // Use string to avoid manual memory management.
-    string patient_id;
-    if (getline(text_file, patient_id)) {
-        patient_id.resize(kPatientIdBufferSize, '\0');
-        binary_file.write(patient_id.c_str(), kPatientIdBufferSize);
-    }
+    // Process the internal patient ID (1 byte).
+    uint8_t patient_id = ReadSingleByteNumber(text_file, "Patient ID");
+    binary_file.write(reinterpret_cast<const char*>(&patient_id),
+                      sizeof(patient_id));
 
     string timestamp;
     if (getline(text_file, timestamp)) {
